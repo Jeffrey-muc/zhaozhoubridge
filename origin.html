@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>选题意义 | 四岸济元</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div id="welcomeMount"></div>
+  <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-scrim" data-close-nav></div>
+
+  <aside class="side-nav" aria-label="作品导航">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <span class="brand-mark">济</span>
+      <span><strong>四岸济元</strong><small>赵州桥数字科普</small></span>
+    </a>
+    <nav class="nav-links">
+      <a class="is-active" href="origin.html">选题意义</a>
+      <a href="four-shores.html">四岸入口</a>
+      <a href="science.html">科学证据</a>
+      <a href="evidence.html">数据回溯</a>
+    </nav>
+    <div class="nav-panel">
+      <span>导览身份</span>
+      <select id="shoreSelect" aria-label="选择四岸青年导览身份">
+        <option value="mainland">大陆青年</option>
+        <option value="hongkong">香港青年</option>
+        <option value="macau">澳门青年</option>
+        <option value="taiwan">台湾青年</option>
+      </select>
+    </div>
+    <div class="nav-panel">
+      <span>文字设置</span>
+      <select id="scriptSelect" aria-label="选择简体或繁体显示">
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁體中文</option>
+      </select>
+    </div>
+  </aside>
+
+  <main id="top" class="page-shell subpage-shell">
+    <section id="origin" class="chapter page-chapter">
+      <div class="chapter-head">
+        <small>01 / 选题来源、背景、意义</small>
+        <h2>从一座古桥出发，讲清楚四岸青年共享的文化根脉</h2>
+        <p>“四岸”指大陆、香港、澳门、台湾；“济”取自赵州桥别名安济桥，也有渡河、相助、通达之意；“元”代表数字元宇宙科普体验。作品不只介绍古迹，而是把赵州桥转化为青年能参与的文化沟通场景。</p>
+        <p>赵州桥是隋代建造的中华瑰宝，是两岸同胞共同拥有的历史文化财富。以此为题材，能够天然地唤起两岸青年对中华传统文化的强烈共鸣，拉近彼此的心灵距离。通过页面展现、保护和活化古建筑，两岸青年在这个过程中共同承担起传承和弘扬中华优秀传统文化的青年责任。</p>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <b>面向对象明确</b>
+          <p>用青年化语言解释桥梁科学，降低历史文物的距离感，让港澳台青年更容易进入主题。</p>
+          <code>传播对象 = 四岸青年</code>
+        </article>
+        <article class="insight-card">
+          <b>文化寓意清晰</b>
+          <p>赵州桥连接两岸，也象征共同文化记忆中的通达、安济与合作。</p>
+          <code>安济 = 安民 + 济水 + 通行</code>
+        </article>
+        <article class="insight-card">
+          <b>双向连接纽带</b>
+          <p>桥的本质是连接两端、化隔阂为通途。在两岸交流的背景下，“赵州桥”的作品就像是一座无形的“科技心桥”，寓意着青年一代通过计算机技术互通有无、互学互鉴。</p>
+          <code>连接方式 = 科技心桥 + 互学互鉴</code>
+        </article>
+      </div>
+      <div class="page-next">
+        <a href="index.html">返回首页</a>
+        <a href="four-shores.html">下一页：四岸入口</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

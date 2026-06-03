@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据来源 | 四岸济元</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div id="welcomeMount"></div>
+  <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-scrim" data-close-nav></div>
+
+  <aside class="side-nav" aria-label="作品导航">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <span class="brand-mark">济</span>
+      <span><strong>四岸济元</strong><small>赵州桥数字科普</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="origin.html">选题意义</a>
+      <a href="four-shores.html">四岸入口</a>
+      <a href="science.html">科学证据</a>
+      <a class="is-active" href="evidence.html">数据回溯</a>
+    </nav>
+    <div class="nav-panel">
+      <span>导览身份</span>
+      <select id="shoreSelect" aria-label="选择四岸青年导览身份">
+        <option value="mainland">大陆青年</option>
+        <option value="hongkong">香港青年</option>
+        <option value="macau">澳门青年</option>
+        <option value="taiwan">台湾青年</option>
+      </select>
+    </div>
+    <div class="nav-panel">
+      <span>文字设置</span>
+      <select id="scriptSelect" aria-label="选择简体或繁体显示">
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁體中文</option>
+      </select>
+    </div>
+  </aside>
+
+  <main id="top" class="page-shell subpage-shell">
+    <section id="evidence" class="chapter page-chapter">
+      <div class="chapter-head">
+        <small>04 / 数据来源</small>
+        
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>桥名</th><th>朝代</th><th>主拱跨度</th><th>桥身总长</th><th>高跨比</th><th>核心结构特点</th>
+            </tr>
+          </thead>
+          <tbody id="dataRows"></tbody>
+        </table>
+      </div>
+      <p class="source-note">派生公式：高跨比 = 矢高 / 主拱跨度；跨度占桥长 = 主拱跨度 / 桥身总长。</p>
+      <p class="source-note">首屏全景素材：Wikimedia Commons《Zhaozhou Bridge, Shijiazhuang banner.jpg》，作者归零者，许可协议 CC BY-SA 4.0；本作品用于沉浸式全景视窗展示。</p>
+      <div class="page-next">
+        <a href="science.html">上一页：科学证据</a>
+        <a href="index.html">返回首页</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="script.js" defer></script>
+</body>
+</html>

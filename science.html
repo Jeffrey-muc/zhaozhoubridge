@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>科学证据 | 四岸济元</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div id="welcomeMount"></div>
+  <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav-scrim" data-close-nav></div>
+
+  <aside class="side-nav" aria-label="作品导航">
+    <a class="brand" href="index.html" aria-label="回到首页">
+      <span class="brand-mark">济</span>
+      <span><strong>四岸济元</strong><small>赵州桥数字科普</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="origin.html">选题意义</a>
+      <a href="four-shores.html">四岸入口</a>
+      <a class="is-active" href="science.html">科学证据</a>
+      <a href="evidence.html">数据回溯</a>
+    </nav>
+    <div class="nav-panel">
+      <span>对照古桥</span>
+      <select id="compareSelect" aria-label="选择古桥对照对象">
+        <option value="寿昌桥">寿昌桥</option>
+        <option value="思本桥">思本桥</option>
+        <option value="忠义桥">忠义桥</option>
+      </select>
+    </div>
+    <div class="nav-panel">
+      <span>导览身份</span>
+      <select id="shoreSelect" aria-label="选择四岸青年导览身份">
+        <option value="mainland">大陆青年</option>
+        <option value="hongkong">香港青年</option>
+        <option value="macau">澳门青年</option>
+        <option value="taiwan">台湾青年</option>
+      </select>
+    </div>
+    <div class="nav-panel">
+      <span>文字设置</span>
+      <select id="scriptSelect" aria-label="选择简体或繁体显示">
+        <option value="zh-Hans">简体中文</option>
+        <option value="zh-Hant">繁體中文</option>
+      </select>
+    </div>
+  </aside>
+
+  <main id="top" class="page-shell subpage-shell">
+    <section id="science" class="chapter page-chapter">
+      <div class="chapter-head">
+        <small>03 / 科学性与技术含量</small>
+        <h2>用数据、结构图和互动实验解释敞肩石拱桥为什么先进</h2>
+        <p>科学性不靠堆术语，而靠可验证指标：主拱跨度、高跨比、桥身总长、桥面宽度、结构效率，以及古今桥梁对照。</p>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>古代石拱桥结构谱系</h3>
+          <svg id="ancientScatter" class="chart-svg" viewBox="0 0 720 430" role="img" aria-label="古代石拱桥跨度与高跨比散点图"></svg>
+        </article>
+        <article class="chart-card">
+          <h3 id="radarHeading">结构指标雷达</h3>
+          <svg id="radarChart" class="chart-svg" viewBox="0 0 540 430" role="img" aria-label="赵州桥与同类古桥结构雷达图"></svg>
+        </article>
+      </div>
+      <div class="lab-layout">
+        <article class="structure-card">
+          <svg id="bridgeDiagram" viewBox="0 0 900 430" role="img" aria-label="赵州桥敞肩拱结构示意图">
+            <defs>
+              <linearGradient id="stoneGradient" x1="0" x2="1">
+                <stop offset="0" stop-color="#c9b58e"/>
+                <stop offset=".52" stop-color="#f0e3c5"/>
+                <stop offset="1" stop-color="#aa9775"/>
+              </linearGradient>
+              <pattern id="masonry" width="36" height="18" patternUnits="userSpaceOnUse">
+                <path d="M0 18H36M18 0V18" stroke="#746854" stroke-width="1" opacity=".5"/>
+              </pattern>
+            </defs>
+            <rect width="900" height="430" fill="#fbf6e9"/>
+            <path class="draw-arch" d="M95 218 Q450 58 805 218" fill="none" stroke="url(#stoneGradient)" stroke-width="58" stroke-linecap="round"/>
+            <path d="M95 218 Q450 58 805 218" fill="none" stroke="url(#masonry)" stroke-width="58" stroke-linecap="round" opacity=".9"/>
+            <rect x="82" y="160" width="736" height="38" rx="2" fill="url(#stoneGradient)" stroke="#51483d" stroke-width="2"/>
+            <g class="bridge-part" data-label="小拱泄洪：扩大过水面积，降低洪水冲击。">
+              <path data-opening="large-left" d="M146 198 Q196 132 246 198Z" fill="#eadcc5" stroke="#51483d" stroke-width="4"/>
+              <path data-opening="large-right" d="M654 198 Q704 132 754 198Z" fill="#eadcc5" stroke="#51483d" stroke-width="4"/>
+            </g>
+            <g class="bridge-part" data-label="敞肩减重：减少石料和桥体自重，降低地基负担。">
+              <path data-opening="small-left" d="M246 189 Q289 139 332 189Z" fill="#eadcc5" stroke="#51483d" stroke-width="4"/>
+              <path data-opening="small-right" d="M568 189 Q611 139 654 189Z" fill="#eadcc5" stroke="#51483d" stroke-width="4"/>
+            </g>
+            <g fill="#857760">
+              <rect x="105" y="198" width="70" height="112"/>
+              <rect x="724" y="198" width="70" height="112"/>
+              <rect x="70" y="298" width="145" height="18"/>
+              <rect x="684" y="298" width="145" height="18"/>
+            </g>
+            <path class="water-line" d="M62 344 C206 302 302 352 422 322 C566 286 642 348 840 306" fill="none" stroke="#2f5d7c" stroke-width="8" opacity=".34"/>
+            <line x1="95" y1="378" x2="805" y2="378" stroke="#a33f32" stroke-width="3"/>
+            <text x="450" y="406" text-anchor="middle" class="svg-note">主拱跨度 37.02 m · 高跨比 0.195 · 敞肩式石拱结构</text>
+          </svg>
+        </article>
+        <article class="arch-lab">
+          <h3>安济结构实验室</h3>
+          <p>拖动滑块，观察“过水能力、减重效果、视觉留白”的综合变化。它把敞肩结构从概念讲解变成可互动理解。</p>
+          <label for="archSlider">敞肩开孔程度</label>
+          <input id="archSlider" type="range" min="0" max="100" value="68">
+          <div class="lab-meter"><span>过水能力</span><b id="waterScore">82%</b></div>
+          <div class="lab-meter"><span>减重效果</span><b id="weightScore">74%</b></div>
+          <div class="lab-meter"><span>视觉留白</span><b id="beautyScore">78%</b></div>
+        </article>
+      </div>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>古今桥梁尺度对照</h3>
+          <svg id="modernScatter" class="chart-svg" viewBox="0 0 720 430" role="img" aria-label="古今桥梁跨度与高跨比散点图"></svg>
+        </article>
+        <article class="chart-card">
+          <h3>高跨比排序</h3>
+          <svg id="modernBar" class="chart-svg" viewBox="0 0 720 430" role="img" aria-label="桥梁高跨比排序柱状图"></svg>
+        </article>
+      </div>
+      <div class="page-next">
+        <a href="four-shores.html">上一页：四岸入口</a>
+        <a href="index.html">返回首页</a>
+        <a href="evidence.html">下一页：数据来源</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
